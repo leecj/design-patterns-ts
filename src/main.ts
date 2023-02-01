@@ -1,34 +1,79 @@
-/**
- * Some predefined delay values (in milliseconds).
- */
-export enum Delays {
-  Short = 500,
-  Medium = 2000,
-  Long = 5000,
+import * as SingletonPatternDemo from './creational/singleton/demo.js';
+import * as SimpleFactoryDemo from './creational/factory/simpleFactory/demo.js';
+import * as FactoryMethodDemo from './creational/factory/factoryMethod/demo.js';
+import * as AbstractFactoryDemo from './creational/factory/abstractFactory/demo.js';
+// declare var require : (moduleId : string) => any;
+// declare var process: any;
+
+import readline from 'readline';
+
+function printMenu(): void {
+  const menu =
+    '= Creational Patterns == \n' +
+    '  1: Singleton \n' +
+    '  2: Simple factory \n' +
+    '  3: Factory method \n' +
+    '  4: Abstract factory \n' +
+    '  4: Builder \n' +
+    '  5: Prototype \n\n' +
+    '= Structural Patterns == \n' +
+    '  6: Adapter \n' +
+    '  7: Bridge \n' +
+    '  8: Composite \n' +
+    '  9: Decorator \n' +
+    ' 10: Facade \n' +
+    ' 11: Flyweight \n' +
+    ' 12: Proxy \n\n' +
+    '= Behavioral Patterns == \n' +
+    ' 13: Chain of responsibility \n' +
+    ' 14: Command \n' +
+    ' 15: Interpreter \n' +
+    ' 16: Iterator \n' +
+    ' 17: Mediator \n' +
+    ' 18: Memento \n' +
+    ' 19: Observer \n' +
+    ' 20: State \n' +
+    ' 21: Strategy \n' +
+    ' 22: Template method \n' +
+    ' 23: Visitor \n';
+
+  console.log('\n\n');
+  console.log('==== Choose one pattern to demonstrate ====');
+  console.log('\n');
+  console.log(menu);
 }
 
-/**
- * Returns a Promise<string> that resolves after a given time.
- *
- * @param {string} name - A name.
- * @param {number=} [delay=Delays.Medium] - A number of milliseconds to delay resolution of the Promise.
- * @returns {Promise<string>}
- */
-function delayedHello(
-  name: string,
-  delay: number = Delays.Medium,
-): Promise<string> {
-  return new Promise((resolve: (value?: string) => void) =>
-    setTimeout(() => resolve(`Hello, ${name}`), delay),
-  );
+export function menu(): void {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  printMenu();
+  rl.question('Which pattern would you like to check?   ', function (answer) {
+    switch (+answer) {
+      case 1:
+        show(SingletonPatternDemo);
+        break;
+      case 2:
+        show(SimpleFactoryDemo);
+        break;
+      case 3:
+        show(FactoryMethodDemo);
+        break;
+      case 4:
+        show(AbstractFactoryDemo);
+        break;
+      default:
+        break;
+    }
+    rl.close();
+  });
 }
 
-// Please see the comment in the .eslintrc.json file about the suppressed rule!
-// Below is an example of how to use ESLint errors suppression. You can read more
-// at https://eslint.org/docs/latest/user-guide/configuring/rules#disabling-rules
-
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export async function greeter(name: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
-  // The name parameter should be of type string. Any is used only to trigger the rule.
-  return await delayedHello(name, Delays.Long);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function show(Pattern: any): void {
+  Pattern.show();
 }
+
+menu();
