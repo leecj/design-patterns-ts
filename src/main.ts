@@ -2,6 +2,7 @@ import * as SingletonPatternDemo from './creational/singleton/demo.js';
 import * as SimpleFactoryDemo from './creational/factory/simpleFactory/demo.js';
 import * as FactoryMethodDemo from './creational/factory/factoryMethod/demo.js';
 import * as AbstractFactoryDemo from './creational/factory/abstractFactory/demo.js';
+import * as BuilderDemo from './creational/builder/demo.js';
 // declare var require : (moduleId : string) => any;
 // declare var process: any;
 
@@ -14,7 +15,7 @@ function printMenu(): void {
     '  2: Simple factory \n' +
     '  3: Factory method \n' +
     '  4: Abstract factory \n' +
-    '  4: Builder \n' +
+    '  5: Builder \n' +
     '  5: Prototype \n\n' +
     '= Structural Patterns == \n' +
     '  6: Adapter \n' +
@@ -63,6 +64,9 @@ export function menu(): void {
         break;
       case 4:
         show(AbstractFactoryDemo);
+        break;
+      case 5:
+        show(BuilderDemo);
         break;
       default:
         break;
