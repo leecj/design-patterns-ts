@@ -4,8 +4,7 @@ import * as FactoryMethodDemo from './creational/factory/factoryMethod/demo.js';
 import * as AbstractFactoryDemo from './creational/factory/abstractFactory/demo.js';
 import * as BuilderDemo from './creational/builder/demo.js';
 import * as PrototypeDemo from './creational/prototype/demo.js';
-// declare var require : (moduleId : string) => any;
-// declare var process: any;
+import * as ProxyDemo from './structural/proxy/demo.js';
 
 import readline from 'readline';
 
@@ -19,13 +18,13 @@ function printMenu(): void {
     '  5: Builder \n' +
     '  6: Prototype \n\n' +
     '= Structural Patterns == \n' +
-    '  6: Adapter \n' +
-    '  7: Bridge \n' +
-    '  8: Composite \n' +
-    '  9: Decorator \n' +
-    ' 10: Facade \n' +
-    ' 11: Flyweight \n' +
-    ' 12: Proxy \n\n' +
+    '  7: Proxy \n' +
+    '  8: Bridge \n' +
+    '  9: Composite \n' +
+    '  10: Decorator \n' +
+    ' 11: Facade \n' +
+    ' 12: Flyweight \n' +
+    ' 13: Proxy \n\n' +
     '= Behavioral Patterns == \n' +
     ' 13: Chain of responsibility \n' +
     ' 14: Command \n' +
@@ -71,6 +70,9 @@ export function menu(): void {
         break;
       case 6:
         show(PrototypeDemo);
+        break;
+      case 7:
+        show(ProxyDemo);
         break;
       default:
         break;
