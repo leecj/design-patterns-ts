@@ -5,6 +5,7 @@ import * as AbstractFactoryDemo from './creational/factory/abstractFactory/demo.
 import * as BuilderDemo from './creational/builder/demo.js';
 import * as PrototypeDemo from './creational/prototype/demo.js';
 import * as ProxyDemo from './structural/proxy/demo.js';
+import * as BridgeDemo from './structural/bridge/demo.js';
 
 import readline from 'readline';
 
@@ -73,6 +74,9 @@ export function menu(): void {
         break;
       case 7:
         show(ProxyDemo);
+        break;
+      case 8:
+        show(BridgeDemo);
         break;
       default:
         break;
