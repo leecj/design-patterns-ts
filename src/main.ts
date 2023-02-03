@@ -6,6 +6,7 @@ import * as BuilderDemo from './creational/builder/demo.js';
 import * as PrototypeDemo from './creational/prototype/demo.js';
 import * as ProxyDemo from './structural/proxy/demo.js';
 import * as BridgeDemo from './structural/bridge/demo.js';
+import * as DecoratorDemo from './structural/decorator/demo.js';
 
 import readline from 'readline';
 
@@ -21,8 +22,8 @@ function printMenu(): void {
     '= Structural Patterns == \n' +
     '  7: Proxy \n' +
     '  8: Bridge \n' +
+    '  9: Decorator \n' +
     '  9: Composite \n' +
-    '  10: Decorator \n' +
     ' 11: Facade \n' +
     ' 12: Flyweight \n' +
     ' 13: Proxy \n\n' +
@@ -77,6 +78,9 @@ export function menu(): void {
         break;
       case 8:
         show(BridgeDemo);
+        break;
+      case 9:
+        show(DecoratorDemo);
         break;
       default:
         break;
