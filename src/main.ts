@@ -7,6 +7,7 @@ import * as PrototypeDemo from './creational/prototype/demo.js';
 import * as ProxyDemo from './structural/proxy/demo.js';
 import * as BridgeDemo from './structural/bridge/demo.js';
 import * as DecoratorDemo from './structural/decorator/demo.js';
+import * as AdapterDemo from './structural/adapter/demo.js';
 
 import readline from 'readline';
 
@@ -23,6 +24,7 @@ function printMenu(): void {
     '  7: Proxy \n' +
     '  8: Bridge \n' +
     '  9: Decorator \n' +
+    '  10: Adapter \n' +
     '  9: Composite \n' +
     ' 11: Facade \n' +
     ' 12: Flyweight \n' +
@@ -81,6 +83,9 @@ export function menu(): void {
         break;
       case 9:
         show(DecoratorDemo);
+        break;
+      case 10:
+        show(AdapterDemo);
         break;
       default:
         break;
