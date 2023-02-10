@@ -8,6 +8,7 @@ import * as ProxyDemo from './structural/proxy/demo.js';
 import * as BridgeDemo from './structural/bridge/demo.js';
 import * as DecoratorDemo from './structural/decorator/demo.js';
 import * as AdapterDemo from './structural/adapter/demo.js';
+import * as ObserverDemo from './behavioral/observer/demo.js';
 
 import readline from 'readline';
 
@@ -25,18 +26,17 @@ function printMenu(): void {
     '  8: Bridge \n' +
     '  9: Decorator \n' +
     '  10: Adapter \n' +
-    '  9: Composite \n' +
     ' 11: Facade \n' +
-    ' 12: Flyweight \n' +
-    ' 13: Proxy \n\n' +
+    ' 12: Composite \n' +
+    ' 13: Flyweight \n' +
     '= Behavioral Patterns == \n' +
+    ' 14: Observer \n' +
     ' 13: Chain of responsibility \n' +
     ' 14: Command \n' +
     ' 15: Interpreter \n' +
     ' 16: Iterator \n' +
     ' 17: Mediator \n' +
     ' 18: Memento \n' +
-    ' 19: Observer \n' +
     ' 20: State \n' +
     ' 21: Strategy \n' +
     ' 22: Template method \n' +
@@ -86,6 +86,9 @@ export function menu(): void {
         break;
       case 10:
         show(AdapterDemo);
+        break;
+      case 14:
+        show(ObserverDemo);
         break;
       default:
         break;
