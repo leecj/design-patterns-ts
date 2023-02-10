@@ -9,6 +9,7 @@ import * as BridgeDemo from './structural/bridge/demo.js';
 import * as DecoratorDemo from './structural/decorator/demo.js';
 import * as AdapterDemo from './structural/adapter/demo.js';
 import * as ObserverDemo from './behavioral/observer/demo.js';
+import * as TemplateDemo from './behavioral/template/demo.js';
 
 import readline from 'readline';
 
@@ -31,6 +32,8 @@ function printMenu(): void {
     ' 13: Flyweight \n' +
     '= Behavioral Patterns == \n' +
     ' 14: Observer \n' +
+    ' 15: Template method \n' +
+
     ' 13: Chain of responsibility \n' +
     ' 14: Command \n' +
     ' 15: Interpreter \n' +
@@ -39,7 +42,6 @@ function printMenu(): void {
     ' 18: Memento \n' +
     ' 20: State \n' +
     ' 21: Strategy \n' +
-    ' 22: Template method \n' +
     ' 23: Visitor \n';
 
   console.log('\n\n');
@@ -90,6 +92,9 @@ export function menu(): void {
       case 14:
         show(ObserverDemo);
         break;
+        case 15:
+          show(TemplateDemo);
+          break;
       default:
         break;
     }
