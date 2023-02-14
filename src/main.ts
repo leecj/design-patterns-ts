@@ -10,6 +10,7 @@ import * as DecoratorDemo from './structural/decorator/demo.js';
 import * as AdapterDemo from './structural/adapter/demo.js';
 import * as ObserverDemo from './behavioral/observer/demo.js';
 import * as TemplateDemo from './behavioral/template/demo.js';
+import * as StrategyDemo from './behavioral/strategy/demo.js';
 
 import readline from 'readline';
 
@@ -33,7 +34,7 @@ function printMenu(): void {
     '= Behavioral Patterns == \n' +
     ' 14: Observer \n' +
     ' 15: Template method \n' +
-
+    ' 16: Strategy \n' +
     ' 13: Chain of responsibility \n' +
     ' 14: Command \n' +
     ' 15: Interpreter \n' +
@@ -41,7 +42,6 @@ function printMenu(): void {
     ' 17: Mediator \n' +
     ' 18: Memento \n' +
     ' 20: State \n' +
-    ' 21: Strategy \n' +
     ' 23: Visitor \n';
 
   console.log('\n\n');
@@ -92,9 +92,12 @@ export function menu(): void {
       case 14:
         show(ObserverDemo);
         break;
-        case 15:
-          show(TemplateDemo);
-          break;
+      case 15:
+        show(TemplateDemo);
+        break;
+      case 16:
+        show(StrategyDemo);
+        break;
       default:
         break;
     }
