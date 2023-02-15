@@ -11,6 +11,9 @@ import * as AdapterDemo from './structural/adapter/demo.js';
 import * as ObserverDemo from './behavioral/observer/demo.js';
 import * as TemplateDemo from './behavioral/template/demo.js';
 import * as StrategyDemo from './behavioral/strategy/demo.js';
+import * as ChainOfResponsibilityDemo from './behavioral/chainOfResponsibility/demo.js';
+
+ChainOfResponsibilityDemo
 
 import readline from 'readline';
 
@@ -35,7 +38,7 @@ function printMenu(): void {
     ' 14: Observer \n' +
     ' 15: Template method \n' +
     ' 16: Strategy \n' +
-    ' 13: Chain of responsibility \n' +
+    ' 17: Chain of responsibility \n' +
     ' 14: Command \n' +
     ' 15: Interpreter \n' +
     ' 16: Iterator \n' +
@@ -97,6 +100,9 @@ export function menu(): void {
         break;
       case 16:
         show(StrategyDemo);
+        break;
+      case 17:
+        show(ChainOfResponsibilityDemo);
         break;
       default:
         break;
